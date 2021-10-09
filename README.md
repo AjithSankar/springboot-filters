@@ -1,0 +1,1 @@
+Simple Spring boot application for filtering entities using criteria builder

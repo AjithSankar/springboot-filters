@@ -29,8 +29,8 @@ public class EmployeeCriteriaRepository {
         this.criteriaBuilder = entityManager.getCriteriaBuilder();
     }
 
-    public Page<Employee> findAllByFilters(EmployeePage employeePage,
-                                           EmployeeSearchCriteria employeeSearchCriteria) {
+    public Page<Employee> getAllEmployees(EmployeePage employeePage,
+                                          EmployeeSearchCriteria employeeSearchCriteria) {
         CriteriaQuery<Employee> criteriaQuery = criteriaBuilder.createQuery(Employee.class);
         Root<Employee> employeeRoot = criteriaQuery.from(Employee.class);
         Predicate predicate = getPredicate(employeeSearchCriteria, employeeRoot);

@@ -27,7 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Override
     public Page<Employee> getEmployeesByFilters(EmployeePage employeePage,
                                                 EmployeeSearchCriteria employeeSearchCriteria) {
-        return employeeCriteriaRepository.findAllByFilters(employeePage,employeeSearchCriteria);
+        return employeeCriteriaRepository.getAllEmployees(employeePage,employeeSearchCriteria);
     }
 
     @Override
